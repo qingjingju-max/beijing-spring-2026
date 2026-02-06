@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>北京新春欢聚 - 2026春节</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #FDF8F3;
+      min-height: 100vh;
+      max-width: 390px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      height: 60px;
+      background: #FFFFFF;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      font-size: 24px;
+    }
+
+    .logo-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: #C85A38;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+      gap: 24px;
+      background: linear-gradient(180deg, #FFE4D6 0%, #FDF8F3 100%);
+    }
+
+    .badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(200, 90, 56, 0.125);
+      border-radius: 20px;
+    }
+
+    .badge-emoji {
+      font-size: 14px;
+    }
+
+    .badge-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: #C85A38;
+    }
+
+    .hero-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: #2D2D2D;
+      text-align: center;
+      width: 100%;
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      font-weight: 500;
+      color: #666666;
+      text-align: center;
+      width: 100%;
+    }
+
+    .hero-desc {
+      font-size: 14px;
+      color: #888888;
+      text-align: center;
+      line-height: 1.6;
+      width: 100%;
+    }
+
+    .deco-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .deco-row span {
+      font-size: 32px;
+    }
+
+    /* Family Section */
+    .family-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 24px;
+      gap: 32px;
+      background: #FFFFFF;
+    }
+
+    .section-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #2D2D2D;
+      text-align: center;
+    }
+
+    .section-sub {
+      font-size: 14px;
+      color: #888888;
+      text-align: center;
+      width: 100%;
+    }
+
+    .family-portrait {
+      width: 100%;
+      height: 280px;
+      border-radius: 16px;
+      background: url('https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?w=800') center/cover no-repeat;
+      background-color: #FFF5F0;
+    }
+
+    /* Spots Section */
+    .spots-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 24px;
+      gap: 32px;
+      background: #FDF8F3;
+    }
+
+    .spots-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+    }
+
+    .spot-card {
+      display: flex;
+      flex-direction: column;
+      background: #FFFFFF;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+    }
+
+    .spot-img {
+      width: 100%;
+      height: 140px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .spot-img-1 { background-image: url('https://images.unsplash.com/photo-1761492190212-9791282c9cd6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600'); }
+    .spot-img-2 { background-image: url('https://images.unsplash.com/photo-1646232814274-d0761d65c240?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600'); }
+    .spot-img-3 { background-image: url('https://images.unsplash.com/photo-1707414016759-377d827a721a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600'); }
+    .spot-img-4 { background-image: url('https://images.unsplash.com/photo-1658881053950-7e4db4ab6ff4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600'); }
+
+    .spot-content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 20px;
+    }
+
+    .spot-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #2D2D2D;
+    }
+
+    .spot-desc {
+      font-size: 14px;
+      color: #888888;
+    }
+
+    .spot-tag {
+      font-size: 12px;
+      color: #C85A38;
+    }
+
+    /* Activities Section */
+    .activities-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 24px;
+      gap: 32px;
+      background: #FFFFFF;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+    }
+
+    .activity-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px;
+      border-radius: 16px;
+    }
+
+    .activity-card-1 { background: #FFF5F0; }
+    .activity-card-2 { background: #F0F7FF; }
+    .activity-card-3 { background: #F5F0FF; }
+    .activity-card-4 { background: #F0FFF5; }
+
+    .activity-date {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      width: 60px;
+      flex-shrink: 0;
+    }
+
+    .activity-day {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .day-1 { color: #C85A38; }
+    .day-2 { color: #3B6CB5; }
+    .day-3 { color: #7B5CB5; }
+    .day-4 { color: #5CB57B; }
+
+    .activity-divider {
+      width: 2px;
+      height: 50px;
+      border-radius: 1px;
+      flex-shrink: 0;
+    }
+
+    .divider-1 { background: #FFD9C9; }
+    .divider-2 { background: #C9DFFF; }
+    .divider-3 { background: #D9C9FF; }
+    .divider-4 { background: #C9FFD9; }
+
+    .activity-content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .activity-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #2D2D2D;
+    }
+
+    .activity-desc {
+      font-size: 12px;
+      color: #666666;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    .footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 24px;
+      gap: 24px;
+      background: #C85A38;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .footer-emoji {
+      font-size: 28px;
+    }
+
+    .footer-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #FFFFFF;
+      text-align: center;
+    }
+
+    .footer-sub {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+      text-align: center;
+    }
+
+    .footer-divider {
+      width: 120px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.5);
+      text-align: center;
+    }
+
+    .footer-year {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.38);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-icon">🏮</span>
+      <span class="logo-text">北京新春欢聚</span>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="badge">
+      <span class="badge-emoji">🎊</span>
+      <span class="badge-text">2026 丙午马年</span>
+    </div>
+    <h1 class="hero-title">欢迎来北京过大年！</h1>
+    <p class="hero-subtitle">阖家团圆，共度新春佳节</p>
+    <p class="hero-desc">肖蔷邀请大家一起相聚北京<br>共同迎接新年的到来 🎉</p>
+    <div class="deco-row">
+      <span>🧧</span>
+      <span>🏮</span>
+      <span>🎆</span>
+      <span>🧨</span>
+      <span>🐉</span>
+    </div>
+  </section>
+
+  <!-- Family Section -->
+  <section class="family-section">
+    <div class="section-header">
+      <h2 class="section-title">👨‍👩‍👧‍👦 我们的大家庭</h2>
+      <p class="section-sub">2岁妹妹Amira、5岁哥哥等等、爸爸妈妈、外公外婆、还有一个外婆，一起来北京过年啦！</p>
+    </div>
+    <div class="family-portrait"></div>
+  </section>
+
+  <!-- Spots Section -->
+  <section class="spots-section">
+    <div class="section-header">
+      <h2 class="section-title">🏛️ 北京必玩景点</h2>
+      <p class="section-sub">带着孩子们探索首都的魅力，感受传统与现代的交融</p>
+    </div>
+    <div class="spots-grid">
+      <div class="spot-card">
+        <div class="spot-img spot-img-1"></div>
+        <div class="spot-content">
+          <h3 class="spot-name">🏯 故宫博物院</h3>
+          <p class="spot-desc">感受皇家宫殿的宏伟壮丽</p>
+          <p class="spot-tag">适合全家 · 历史文化</p>
+        </div>
+      </div>
+      <div class="spot-card">
+        <div class="spot-img spot-img-2"></div>
+        <div class="spot-content">
+          <h3 class="spot-name">🏔️ 八达岭长城</h3>
+          <p class="spot-desc">登高望远，感受万里雄关</p>
+          <p class="spot-tag">户外探索 · 亲子挑战</p>
+        </div>
+      </div>
+      <div class="spot-card">
+        <div class="spot-img spot-img-3"></div>
+        <div class="spot-content">
+          <h3 class="spot-name">🌙 天坛公园</h3>
+          <p class="spot-desc">祈年殿下，许下新年愿望</p>
+          <p class="spot-tag">祈福许愿 · 遛娃首选</p>
+        </div>
+      </div>
+      <div class="spot-card">
+        <div class="spot-img spot-img-4"></div>
+        <div class="spot-content">
+          <h3 class="spot-name">🐼 北京动物园</h3>
+          <p class="spot-desc">看大熊猫，孩子们的最爱</p>
+          <p class="spot-tag">亲子必去 · 萌宠天堂</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activities Section -->
+  <section class="activities-section">
+    <div class="section-header">
+      <h2 class="section-title">🎉 过年活动安排</h2>
+      <p class="section-sub">每天的快乐都是一样的：打麻将、大吃特吃、玩等等、玩Amira！</p>
+    </div>
+    <div class="timeline">
+      <div class="activity-card activity-card-1">
+        <div class="activity-date">
+          <span class="activity-day day-1">除夕</span>
+        </div>
+        <div class="activity-divider divider-1"></div>
+        <div class="activity-content">
+          <h4 class="activity-title">🀄 打麻将 + 🍲 大吃特吃 + 👦 玩等等 + 👧 玩Amira</h4>
+          <p class="activity-desc">大人们搓麻将，小朋友们一起玩耍，晚上看春晚吃年夜饭，一家人其乐融融！</p>
+        </div>
+      </div>
+      <div class="activity-card activity-card-2">
+        <div class="activity-date">
+          <span class="activity-day day-2">初一</span>
+        </div>
+        <div class="activity-divider divider-2"></div>
+        <div class="activity-content">
+          <h4 class="activity-title">🀄 打麻将 + 🍜 大吃特吃 + 👦 玩等等 + 👧 玩Amira</h4>
+          <p class="activity-desc">新年第一天，继续搓麻将，大吃特吃，等等和Amira一起玩，大家都开心！</p>
+        </div>
+      </div>
+      <div class="activity-card activity-card-3">
+        <div class="activity-date">
+          <span class="activity-day day-3">初二</span>
+        </div>
+        <div class="activity-divider divider-3"></div>
+        <div class="activity-content">
+          <h4 class="activity-title">🀄 打麻将 + 🥘 大吃特吃 + 👦 玩等等 + 👧 玩Amira</h4>
+          <p class="activity-desc">麻将战继续，美食不断档，等等带着Amira到处探险，回来接着玩！</p>
+        </div>
+      </div>
+      <div class="activity-card activity-card-4">
+        <div class="activity-date">
+          <span class="activity-day day-4">初三</span>
+        </div>
+        <div class="activity-divider divider-4"></div>
+        <div class="activity-content">
+          <h4 class="activity-title">🀄 打麻将 + 🍖 大吃特吃 + 👦 玩等等 + 👧 玩Amira</h4>
+          <p class="activity-desc">最后一天也要尽兴！麻将桌上继续战斗，等等和Amira玩得开心，大人吃得满足！</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <span class="footer-emoji">🎊 🏮 🧧 🎆 🐉</span>
+      <h2 class="footer-title">祝大家新年快乐！</h2>
+      <p class="footer-sub">蛇年大吉 · 阖家幸福 · 万事如意</p>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p class="footer-copy">Made with ❤️ by 肖蔷 for our beloved family</p>
+      <p class="footer-year">2026 春节 · 北京</p>
+    </div>
+  </footer>
+</body>
+</html>
